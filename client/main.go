@@ -1,9 +1,14 @@
 package main
 
-import "github.com/ormushq/ormus/source/delivery/httpserver"
+import (
+	"github.com/ormushq/ormus/config"
+	"github.com/ormushq/ormus/source/delivery/httpserver"
+)
 
 func main() {
-	server := httpserver.New()
+	cfg := config.C()
+
+	server := httpserver.New(cfg.Source)
 
 	server.Serve()
 }
