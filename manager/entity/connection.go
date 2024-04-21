@@ -10,6 +10,3 @@ type Connection struct {
 	Pipes        []Pipeline
 	Integrations []Integration
 }
-
-// TODO: Do we need source object?
-type Source struct{}

@@ -10,5 +10,22 @@ redis:
   db: 0
   password: ""
 destination:
-  consumer_topic: consumer_topic
- 
+  debug_mode: true
+  consumer_topic: "pe.#"    # pe stands for processed event. and # substitute for zero or more words.
+  rabbitmq_consumer_connection:
+    user: guest
+    password: guest
+    host: localhost
+    port: 5672
+  rabbitmq_task_manager_connection:
+      user: guest
+      password: guest
+      host: localhost
+      port: 5672
+  redis_task_idempotency:
+    port: 6379
+    host: localhost
+    db: 0
+    password: ""
+    prefix: "destination-task-status::"
+    expiration: 0

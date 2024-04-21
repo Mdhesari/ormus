@@ -21,4 +21,8 @@
 go.work
 
 .idea
+# logs
 logs/
+mise.log
+
+destination/logs.json
